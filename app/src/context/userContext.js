@@ -6,7 +6,6 @@ export const UserContext = createContext();
 
 export const UserContextProvider = (props)=>{
     const [currentUser, setCurrentUser] = useState()
-    const [userId, setUserId] = useState('')
     const [idUser, setIdUser] = useState('');
     const SignUp = (email, pwd) =>{
        return createUserWithEmailAndPassword(
@@ -14,9 +13,6 @@ export const UserContextProvider = (props)=>{
             email, 
             pwd
         )
-    }
-    const changeUserId = (userId)=>{
-        setUserId(userId)
     }
     const SignIn = (email, pwd) =>{
         return signInWithEmailAndPassword(
@@ -26,7 +22,7 @@ export const UserContextProvider = (props)=>{
         )
     }
     return(
-        <UserContext.Provider value={{SignUp, SignIn, currentUser, idUser, setIdUser, changeUserId, userId}}>
+        <UserContext.Provider value={{SignUp, SignIn, currentUser, idUser}}>
             {props.children}
         </UserContext.Provider>
     )

@@ -19,8 +19,8 @@ export const Login = ()=>{
         e.preventDefault();
         try{
             const cred = await SignIn(email, mdp);
-            await changeUserId(cred.user.uid);
-            navigate('/test');
+            localStorage.setItem('idUser', cred.user.uid);
+            navigate('/admin');
         }catch(err){
             console.log(err);
         }

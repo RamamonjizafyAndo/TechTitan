@@ -1,20 +1,49 @@
+// App.js
 import './App.css';
-import { Login } from './components/login'
-import { SignUp } from './components/sign-up';
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import React from 'react';
-import Admin from './Admin';
+import './style/Admin.css';
+import { Login } from './components/login';
+import { BrowserRouter, Route, Routes, useNavigate } from 'react-router-dom';
+import React, { useContext, useEffect } from 'react';
+import Sidebar from './components/admin/Sidebar';
+import MainContent from './components/admin/MainContent';
+import Table from './components/admin/Table';
+import Historic from './components/admin/historic';
+import Chat from './components/admin/chat';
+import Whatsapp from './components/admin/whatsapp';
+import { UserContext } from './context/userContext';
+
 function App() {
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    console.log(localStorage.getItem('idUser'));
+    if (localStorage.getItem('idUser')) {
+      // Check the current route before navigating
+      if (window.location.pathname !== '/dashboard') {
+        navigate('/dashboard');
+      }
+    } else {
+      navigate('/');
+    }
+  }, [localStorage.getItem('idUser')]);
+
   return (
     <>
-      <BrowserRouter>
+      {localStorage.getItem('idUser') ? (
+        <Sidebar>
+          <Routes>
+            <Route path='/dashboard' element={<MainContent />} />
+            <Route path='/table' element={<Table />} />
+            <Route path='/historique' element={<Historic />} />
+            <Route path='/chatbot' element={<Chat />} />
+            <Route path='/whatsapp' element={<Whatsapp />} />
+          </Routes>
+        </Sidebar>
+      ) : (
         <Routes>
-          <Route path="/" element={<Login />} />
-          <Route path='/sign-up' element={<SignUp />} />
-          <Route path='/admin' element={<Admin />} />
+          <Route path='/' element={<Login />} />
         </Routes>
-      </BrowserRouter>
-
+      )}
     </>
   );
 }
