@@ -1,16 +1,17 @@
 import { useContext } from "react";
 import { UserContext } from "../../context/userContext";
 import Navbar from "./Navbar";
+import { ChartDashBoard } from "../dashboard/Chart";
 
 function MainContent() {
-    const {userId} = useContext(UserContext);
+    const { userId } = useContext(UserContext);
     console.log(userId);
     return (<>
         <div className="d-flex flex-column">
             {/* Main Content */}
             <div id="content">
                 {/* Topbar */}
-                
+
                 {/* End of Topbar */}
                 {/* Begin Page Content */}
                 <div className="container-fluid">
@@ -132,13 +133,13 @@ function MainContent() {
                                 {/* Card Header - Dropdown */}
                                 <div className="card-header py-3 d-flex flex-row align-items-center justify-content-between">
                                     <h6 className="m-0 font-weight-bold text-primary">
-                                        Graphiques de consommations
+                                        Consommation de ce mois ({new Date().toLocaleDateString("fr-FR",{month:"long"})})
                                     </h6>
                                 </div>
                                 {/* Card Body */}
                                 <div className="card-body">
                                     <div className="chart-area">
-                                        <canvas id="myAreaChart" />
+                                        <ChartDashBoard />
                                     </div>
                                 </div>
                             </div>
@@ -179,75 +180,24 @@ function MainContent() {
                             <div className="card shadow mb-4">
                                 <div className="card-header py-3">
                                     <h6 className="m-0 font-weight-bold text-primary">
-                                        Projects
+                                        État de chaque prises connectées
                                     </h6>
                                 </div>
                                 <div className="card-body">
                                     <h4 className="small font-weight-bold">
-                                        Server Migration <span className="float-right">20%</span>
+                                        Appareil 1
                                     </h4>
-                                    <div className="progress mb-4">
-                                        <div
-                                            className="progress-bar bg-danger"
-                                            role="progressbar"
-                                            style={{ width: "20%" }}
-                                            aria-valuenow={20}
-                                            aria-valuemin={0}
-                                            aria-valuemax={100}
-                                        />
-                                    </div>
+                                    <span class="badge badge-success mr-1">Allumé</span>
+                                    <span class="badge badge-danger mr-1">Éteint</span>
+                                    <span class="badge badge-warning mr-1">Besoin de maintenance</span>
+                                </div>
+                                <div className="card-body">
                                     <h4 className="small font-weight-bold">
-                                        Sales Tracking <span className="float-right">40%</span>
+                                        Appareil 1
                                     </h4>
-                                    <div className="progress mb-4">
-                                        <div
-                                            className="progress-bar bg-warning"
-                                            role="progressbar"
-                                            style={{ width: "40%" }}
-                                            aria-valuenow={40}
-                                            aria-valuemin={0}
-                                            aria-valuemax={100}
-                                        />
-                                    </div>
-                                    <h4 className="small font-weight-bold">
-                                        Customer Database <span className="float-right">60%</span>
-                                    </h4>
-                                    <div className="progress mb-4">
-                                        <div
-                                            className="progress-bar"
-                                            role="progressbar"
-                                            style={{ width: "60%" }}
-                                            aria-valuenow={60}
-                                            aria-valuemin={0}
-                                            aria-valuemax={100}
-                                        />
-                                    </div>
-                                    <h4 className="small font-weight-bold">
-                                        Payout Details <span className="float-right">80%</span>
-                                    </h4>
-                                    <div className="progress mb-4">
-                                        <div
-                                            className="progress-bar bg-info"
-                                            role="progressbar"
-                                            style={{ width: "80%" }}
-                                            aria-valuenow={80}
-                                            aria-valuemin={0}
-                                            aria-valuemax={100}
-                                        />
-                                    </div>
-                                    <h4 className="small font-weight-bold">
-                                        Account Setup <span className="float-right">Complete!</span>
-                                    </h4>
-                                    <div className="progress">
-                                        <div
-                                            className="progress-bar bg-success"
-                                            role="progressbar"
-                                            style={{ width: "100%" }}
-                                            aria-valuenow={100}
-                                            aria-valuemin={0}
-                                            aria-valuemax={100}
-                                        />
-                                    </div>
+                                    <span class="badge badge-success mr-1">Allumé</span>
+                                    <span class="badge badge-danger mr-1">Éteint</span>
+                                    <span class="badge badge-warning mr-1">Besoin de maintenance</span>
                                 </div>
                             </div>
                         </div>

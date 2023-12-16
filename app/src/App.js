@@ -11,6 +11,7 @@ import Historic from './components/admin/historic';
 import Chat from './components/admin/chat';
 import Whatsapp from './components/admin/whatsapp';
 import { UserContext } from './context/userContext';
+import Facturation from './components/admin/Facturation';
 
 function App() {
   const navigate = useNavigate();
@@ -37,6 +38,7 @@ function App() {
             <Route path='/historique' element={<Historic />} />
             <Route path='/chatbot' element={<Chat />} />
             <Route path='/whatsapp' element={<Whatsapp />} />
+            <Route path='/facturation' element={<Facturation />} />
           </Routes>
         </Sidebar>
       ) : (

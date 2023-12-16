@@ -32,7 +32,7 @@ function Sidebar({ children }) {
           <hr className="sidebar-divider my-0" />
           <li className="nav-item">
             <NavLink
-              to={'/'}
+              to={'/dashboard'}
               className="nav-link"
               activeClassName="active-link"
               exact
@@ -61,6 +61,16 @@ function Sidebar({ children }) {
             >
               <i className="fas fa-fw fa-wrench" />
               <span>Historique de consommation</span>
+            </NavLink>
+          </li>
+          <li className="nav-item">
+            <NavLink
+              to={'/facturation'}
+              className="nav-link"
+              activeClassName="active-link"
+            >
+              <i className="fas fa-fw fa-wrench" />
+              <span>Facturation</span>
             </NavLink>
           </li>
           <hr className="sidebar-divider" />
