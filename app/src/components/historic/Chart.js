@@ -99,8 +99,5 @@ export const data = {
 };
 
 export function ChartHistoric() {
-
-
-
     return <Line options={options} data={data} />;
 }

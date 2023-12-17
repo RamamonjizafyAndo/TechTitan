@@ -42,14 +42,14 @@ function Sidebar({ children }) {
             </NavLink>
           </li>
           <hr className="sidebar-divider" />
-          <div className="sidebar-heading">OK</div>
+          <div className="sidebar-heading">Gestion</div>
           <li className="nav-item">
             <NavLink
               to={'/table'}
               className="nav-link"
               activeClassName="active-link"
             >
-              <i className="fas fa-fw fa-cog" />
+              <i className="fas fa-fw fa-bolt" />
               <span>Prises connectés</span>
             </NavLink>
           </li>
@@ -59,7 +59,7 @@ function Sidebar({ children }) {
               className="nav-link"
               activeClassName="active-link"
             >
-              <i className="fas fa-fw fa-wrench" />
+              <i className="fas fa-fw fa-chart-simple" />
               <span>Historique de consommation</span>
             </NavLink>
           </li>
@@ -69,7 +69,7 @@ function Sidebar({ children }) {
               className="nav-link"
               activeClassName="active-link"
             >
-              <i className="fas fa-fw fa-wrench" />
+              <i className="fas fa-fw fa-dollar-sign" />
               <span>Facturation</span>
             </NavLink>
           </li>
@@ -91,7 +91,7 @@ function Sidebar({ children }) {
               className="nav-link"
               activeClassName="active-link"
             >
-              <i className="fas fa-fw fa-chart-area" />
+              <i className="fa-brands fa-fw fa-whatsapp" />
               <span>Intégration WhatsApp</span>
             </NavLink>
           </li>

@@ -1,7 +1,7 @@
 function Table() {
     return <>
-        <div class="card-body m-5">
-            <div className="font-weight-bold h2">Liste des appareils connectées</div>
+        <h1 className="h3 mb-2 text-gray-800">Listes des appareils connectées</h1>
+        <div class="card-body mx-1">
             <div class="table-responsive">
                 <table class="table table-outlined" id="dataTable" width="100%" cellspacing="0">
                     <thead>
