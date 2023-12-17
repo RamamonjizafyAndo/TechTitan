@@ -114,7 +114,7 @@ function MainContent() {
                                                 Consommation journalière
                                             </div>
                                             <div className="h5 mb-0 font-weight-bold text-gray-800">
-                                                $40,000
+                                                {valueGroup(month)}
                                             </div>
                                         </div>
                                         <div className="col-auto">
