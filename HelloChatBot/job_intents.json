@@ -1,0 +1,169 @@
+{
+    "intents": [
+      {
+        "tag": "intensité",
+        "patterns": [
+          "Tu peux me donner l'intensité du courant de ma prise",
+          "Quelle est l'intensité de ma prise?",
+          "Indique-moi l'intensité actuelle de ma prise"
+        ],
+        "responses": [
+          "intensité-D'accord, voici le résultat: , voici l'intensité de votre prise",
+          "intensité-L'intensité de votre prise est de X ampères",
+          "intensité-La mesure actuelle d'intensité de votre prise est X A"
+        ]
+      },
+      {
+        "tag": "tension",
+        "patterns": [
+          "Tu peux me donner la tension du courant de ma prise",
+          "Quelle est la tension de ma prise?",
+          "Indique-moi la tension actuelle de ma prise"
+        ],
+        "responses": [
+          "tension-D'accord, voici le résultat: , voici la tension de votre prise",
+          "tension-La tension de votre prise est de X volts",
+          "tension-La mesure actuelle de tension de votre prise est X V"
+        ]
+      },
+      {
+        "tag": "puissance",
+        "patterns": [
+          "Tu peux me donner la puissance du courant de ma prise",
+          "Quelle est la puissance de ma prise?",
+          "Indique-moi la puissance actuelle de ma prise"
+        ],
+        "responses": [
+          "puissance-D'accord, voici le résultat: , voici la puissance de votre prise",
+          "puissance-La puissance de votre prise est de X watts",
+          "puissance-La mesure actuelle de puissance de votre prise est X W"
+        ]
+      },
+      {
+        "tag": "helloworld",
+        "patterns": [
+          "Bonjour",
+          "Coucou",
+          "Salut",
+          "Hello",
+          "Salutations"
+        ],
+        "responses": [
+          "Bonjour, qu'est-ce que je peux faire pour vous ?",
+          "Salut ! Comment puis-je vous aider aujourd'hui ?",
+          "Hello ! En quoi puis-je vous assister ?",
+          "Coucou ! Vous avez des questions ou des demandes spécifiques ?",
+          "Salutations ! Je suis là pour vous aider. Comment puis-je vous assister ?"
+        ]
+      },
+      {
+        "tag": "about",
+        "patterns": [
+          "Qui es-tu ?",
+          "Parle-moi de toi",
+          "Qu'est-ce que tu fais ?"
+        ],
+        "responses": [
+          "Je suis un chatbot de Boulou Energy, conçu pour vous aider à gérer votre prise connectée."
+        ]
+      },
+      {
+        "tag": "thanks",
+        "patterns": [
+          "Merci",
+          "Merci beaucoup",
+          "C'est gentil"
+        ],
+        "responses": [
+          "De rien ! Si vous avez d'autres questions, n'hésitez pas.",
+          "Je suis là pour ça ! N'hésitez pas si vous avez besoin d'aide supplémentaire."
+        ]
+      },
+      {
+        "tag": "goodbye",
+        "patterns": [
+          "Au revoir",
+          "À bientôt",
+          "Adieu"
+        ],
+        "responses": [
+          "Au revoir ! Si vous avez d'autres questions, n'hésitez pas à revenir.",
+          "À bientôt ! N'hésitez pas à me solliciter si vous avez besoin d'assistance ultérieure."
+        ]
+      },
+      {
+        "tag": "current_stats",
+        "patterns": [
+          "Statistiques actuelles",
+          "Informations de consommation actuelles",
+          "Données de consommation en temps réel"
+        ],
+        "responses": [
+          "stat-D'accord, voici le résultat: , voici les statistiques actuelles de votre prise.",
+          "stat-Voici les informations de consommation actuelles de votre prise.",
+          "stat-Les données de consommation en temps réel sont disponibles. Les voici."
+        ]
+      },
+      {
+        "tag": "yearly_stats",
+        "patterns": [
+          "Statistiques annuelles",
+          "Bilan de consommation de l'année",
+          "Données de consommation de cette année"
+        ],
+        "responses": [
+          "year-D'accord, voici le résultat: ",
+          "year-Bien reçu, voici le résultat: "
+        ]
+      },
+      {
+        "tag": "month_stats",
+        "patterns": [
+          "Statistiques mensuelle",
+          "Bilan de consommation du mois",
+          "Données de consommation de cette mois"
+        ],
+        "responses": [
+          "month-D'accord, voici le résultat: ",
+          "month-Bien reçu, voici le résultat: "
+        ]
+      },
+      {
+        "tag": "daily_stats",
+        "patterns": [
+          "Statistiques journalier",
+          "Bilan de consommation du jour",
+          "Données de consommation d'aujourd'hui"
+        ],
+        "responses": [
+          "day-D'accord, voici le résultat: ",
+          "day-Bien reçu, voici le résultat: "
+        ]
+      },
+      {
+        "tag": "on",
+        "patterns": [
+          "Allumer la prise",
+          "Activer la prise",
+          "Mettre en marche la prise"
+        ],
+        "responses": [
+          "on-D'accord, voici le résultat: la prise est allumée",
+          "on-Bien reçu, voici le résultat: la prise est en marche"
+        ]
+      },
+      {
+        "tag": "off",
+        "patterns": [
+          "Éteindre la prise",
+          "Désactiver la prise",
+          "Arrêter la prise"
+        ],
+        "responses": [
+          "off-D'accord, voici le résultat: la prise est éteinte",
+          "off-Bien reçu, voici le résultat: la prise est arrêtée"
+        ]
+      }
+    ]
+  }
+  

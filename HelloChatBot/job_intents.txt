@@ -1,0 +1,93 @@
+{
+  "intents": [
+    {
+      "tag": "allume led1",
+      "patterns": [
+        "Allume la lumière de la chambre 1.",
+        "Active l'éclairage de la chambre 1",
+        "Chambre 1, allume la lumière s'il te plaît",
+        "Éclaire la chambre principale",
+        "Activer l'ampoule de la chambre 1",
+        "Chambre 1, éteins la lumière",
+        "Illuminateur principal, allume la lumière",
+        "La chambre numéro un a besoin de lumière"
+      ],
+      "responses": [
+        "allumer led1-Bien reçu, je vais allumer la lumière dans la chambre principal",
+        "allumer led1-Attendez une minute pour que j'allume la lumière dans chambre un",
+        "allumer led1-Ok d'accord"
+      ]
+    },
+    {
+      "tag": "allume led2",
+      "patterns": [
+        "Allume la lumière de la chambre 2.",
+        "Active l'éclairage de la chambre 2",
+        "Chambre 2, allume la lumière s'il te plaît",
+        "Éclaire la chambre deux",
+        "Activer l'ampoule de la chambre 2",
+        "Chambre 2, éteins la lumière",
+        "La chambre numéro deux a besoin de lumière"
+      ],
+      "responses": [
+        "allumer led2-Bien reçu, je vais allumer la lumière dans la chambre deux",
+        "allumer led2-Attendez une minute pour que j'allume la lumière dans chambre deux",
+        "allumer led2-Ok d'accord"
+      ]
+    },
+    {
+      "tag": "helloworld",
+      "patterns": [
+        "Bonjour",
+        "Coucou",
+        "Salut",
+        "Hello",
+        "Salutations"
+      ],
+      "responses": [
+        "Bonjour, qu'est-ce que je peux faire pour vous ?",
+        "Salut ! Comment puis-je vous aider aujourd'hui ?",
+        "Hello ! En quoi puis-je vous assister ?",
+        "Coucou ! Vous avez des questions ou des demandes spécifiques ?",
+        "Salutations ! Je suis là pour vous aider. Comment puis-je vous assister ?"
+      ]
+    },
+    {
+      "tag": "about",
+      "patterns": [
+          "Qui es-tu ?",
+          "Parle-moi de toi",
+          "Qu'est-ce que tu fais ?"
+      ],
+      "responses": [
+          "Je suis votre chatbot domestique, conçu pour vous aider à gérer votre maison intelligente.",
+          "En tant qu'assistant virtuel, je suis ici pour simplifier la gestion de votre maison. Posez-moi des questions sur les dispositifs connectés ou donnez-moi des commandes pour automatiser certaines tâches."
+      ]
+  }
+  ,
+    {
+      "tag": "thanks",
+      "patterns": [
+        "Merci",
+        "Merci beaucoup",
+        "C'est gentil"
+      ],
+      "responses": [
+        "De rien ! Si vous avez d'autres questions, n'hésitez pas.",
+        "Je suis là pour ça ! N'hésitez pas si vous avez besoin d'aide supplémentaire."
+      ]
+    },
+    {
+      "tag": "goodbye",
+      "patterns": [
+        "Au revoir",
+        "À bientôt",
+        "Adieu"
+      ],
+      "responses": [
+        "Au revoir ! Si vous avez d'autres questions, n'hésitez pas à revenir.",
+        "À bientôt ! N'hésitez pas à me solliciter si vous avez besoin d'assistance ultérieure."
+      ]
+    }
+  ]
+}
