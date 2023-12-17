@@ -1,0 +1,48 @@
+{
+  "expo": {
+    "name": "Domotique",
+    "slug": "domotique",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "package": "com.niaina42.domotique",
+      "permissions": [
+        "android.permission.RECORD_AUDIO"
+      ]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      [
+        "@react-native-voice/voice",
+        {
+          "microphonePermission": "Allow microphone access",
+          "speechRecognitionPermission": "Allow speech recognission access"
+        }
+      ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "f235e857-f9b3-4cbc-b54d-9c0c9474cd45"
+      }
+    }
+  }
+}
