@@ -2,9 +2,11 @@ import Navbar from "./Navbar";
 import { ChartDashBoard } from "../dashboard/Chart";
 import axios from "axios";
 import { useContext, useEffect, useState } from 'react';
+import { getDocs, collection, query, where, getFirestore } from 'firebase/firestore';
 
 function MainContent() {
     const [month, setMonth] = useState('')
+    const [idPrise, setIdPrise] = useState(0);
     function valueGroup(data){
         var values = []
         let valeur = 0
@@ -51,6 +53,35 @@ function MainContent() {
         fetch()
           
       })
+      const fetchData = async () => {
+        const db = getFirestore();
+        const chartCollection = collection(db, 'user');
+        const userQuery = query(chartCollection, where('id', '==', localStorage.getItem('idUser')));
+    
+        try {
+          const snapshot = await getDocs(userQuery);
+    
+          const userQueryArray = snapshot.docs.map(doc => doc.data());
+    
+          return userQueryArray[0].prise.length;
+        } catch (err) {
+          console.error(err);
+          return null;
+        }
+      };
+    
+      useEffect(() => {
+        const fetchAndSetIdPrise = async () => {
+          const id = await fetchData();
+          setIdPrise(id);
+        };
+    
+        fetchAndSetIdPrise();
+      }, [localStorage.getItem('idUser')]);
+    
+      useEffect(() => {
+        console.log(idPrise); // Effectuez d'autres actions ici lorsque idPrise change
+      }, [idPrise]);
     return (<>
         <div className="d-flex flex-column">
             {/* Main Content */}
@@ -125,7 +156,7 @@ function MainContent() {
                                             <div className="row no-gutters align-items-center">
                                                 <div className="col-auto">
                                                     <div className="h5 mb-0 mr-3 font-weight-bold text-gray-800">
-                                                        50
+                                                        {idPrise}
                                                     </div>
                                                 </div>
                                             </div>
@@ -147,7 +178,7 @@ function MainContent() {
                                                 Prises connectées
                                             </div>
                                             <div className="h5 mb-0 font-weight-bold text-gray-800">
-                                                18
+                                                {idPrise}
                                             </div>
                                         </div>
                                         <div className="col-auto">
