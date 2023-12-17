@@ -4,7 +4,7 @@ import { useState, useContext } from "react";
 import { useNavigate } from 'react-router-dom';
 import { addDoc, collection } from 'firebase/firestore';
 import { UserContext } from '../context/userContext'
-import { data } from "../service/firebase-config";
+import { database } from "../service/firebase-config";
 
 export const SignUp = () => {
     const navigate = useNavigate();
@@ -42,7 +42,7 @@ export const SignUp = () => {
         try {
             const cred = await SignUp(email, mdp);
             const id_user = cred.user.uid;
-            const userRef = collection(data, 'user');
+            const userRef = collection(database, 'user');
             await addDoc(userRef, {
                 id: id_user,
                 nom: nom,
