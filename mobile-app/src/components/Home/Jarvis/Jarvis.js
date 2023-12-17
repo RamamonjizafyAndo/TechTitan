@@ -27,9 +27,7 @@ const Home = ({ navigation }) => {
           'Content-Type': 'application/json',
         },
       });
-  
-      console.log(response.data);
-      // Mettez à jour les états en fonction de la réponse
+        // Mettez à jour les états en fonction de la réponse
       setIsSwitchOn(response.data.result.status.switch);
       setIntensity(response.data.result.status.actual_current);
       setCurrent(response.data.result.status.actual_voltage);
@@ -41,7 +39,10 @@ const Home = ({ navigation }) => {
   
   useEffect(() => {
     // Appelez la fonction fetchData pour récupérer les données lors du montage du composant
-    fetchData();
+    setInterval(()=>{
+      fetchData();
+    },1500)
+    
   }); // Le tableau vide [] signifie que cela ne s'exécute qu'une fois après le montage initial
 
   const toggleSwitch = async () => {

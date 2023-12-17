@@ -139,7 +139,8 @@ export const SignUp = () => {
                                         </div>
 
                                         <div className="mt-4 pt-2">
-                                            <input className="btn btn-primary btn-lg" type="submit" value="S'inscrire" />
+                                            <input className="btn btn-primary btn-lg" type="submit" value="S'inscrire" />{' '}
+                                            <button className="btn btn-secondary btn-lg" onClick={()=>{navigate('/')}} >Retour</button>
                                         </div>
                                     </form>
                                 </div>

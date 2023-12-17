@@ -94,13 +94,6 @@ function MainContent() {
                     {/* Page Heading */}
                     <div className="d-sm-flex align-items-center justify-content-between mb-4">
                         <h1 className="h3 mb-0 text-gray-800">Dashboard</h1>
-                        <a
-                            href="#"
-                            className="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"
-                        >
-                            <i className="fas fa-download fa-sm text-white-50" /> Generate
-                            Report
-                        </a>
                     </div>
                     {/* Content Row */}
                     <div className="row">
@@ -114,7 +107,7 @@ function MainContent() {
                                                 Consommation journalière
                                             </div>
                                             <div className="h5 mb-0 font-weight-bold text-gray-800">
-                                                {valueGroup(month)}
+                                                {valueGroup(month)} Ar
                                             </div>
                                         </div>
                                         <div className="col-auto">
@@ -246,14 +239,6 @@ function MainContent() {
                                     <h6 className="m-0 font-weight-bold text-primary">
                                         État de chaque prises connectées
                                     </h6>
-                                </div>
-                                <div className="card-body">
-                                    <h4 className="small font-weight-bold">
-                                        Appareil 1
-                                    </h4>
-                                    <span class="badge badge-success mr-1">Allumé</span>
-                                    <span class="badge badge-danger mr-1">Éteint</span>
-                                    <span class="badge badge-warning mr-1">Besoin de maintenance</span>
                                 </div>
                                 <div className="card-body">
                                     <h4 className="small font-weight-bold">

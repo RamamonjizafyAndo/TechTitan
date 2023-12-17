@@ -21,17 +21,17 @@ function Facturation(){
                                 <span class="ml-1 badge badge-secondary">cuisine</span>
                             </td>
                             <td className="text-justify">
-                                40 KWh
+                                0.7 KWh
                             </td>
                             <td className="text-justify">
-                                40000 Ar
+                                0 Ar
                             </td>
                         </tr>
                     </tbody>
                     <tfoot>
                         <tr>
                             <td colSpan={2} className="font-weight-bold">Total</td>
-                            <td className="text-justify">4514</td>
+                            <td className="text-justify">0</td>
                         </tr>
                     </tfoot>
                 </table>

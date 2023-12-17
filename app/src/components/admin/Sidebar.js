@@ -27,7 +27,7 @@ function Sidebar({ children }) {
             <div className="sidebar-brand-icon rotate-n-15">
               <i className="fas fa-laugh-wink" />
             </div>
-            <div className="sidebar-brand-text mx-3">Selector</div>
+            <div className="sidebar-brand-text mx-3">BoulouEnergy</div>
           </a>
           <hr className="sidebar-divider my-0" />
           <li className="nav-item">
