@@ -12,6 +12,7 @@ import Chat from './components/admin/chat';
 import Whatsapp from './components/admin/whatsapp';
 import { UserContext } from './context/userContext';
 import Facturation from './components/admin/Facturation';
+import { SignUp } from './components/sign-up';
 
 function App() {
   const navigate = useNavigate();
@@ -23,8 +24,6 @@ function App() {
       if (window.location.pathname !== '/dashboard') {
         navigate('/dashboard');
       }
-    } else {
-      navigate('/');
     }
   }, [localStorage.getItem('idUser')]);
 
@@ -44,6 +43,7 @@ function App() {
       ) : (
         <Routes>
           <Route path='/' element={<Login />} />
+          <Route path='/sign-up' element={<SignUp />} />
         </Routes>
       )}
     </>

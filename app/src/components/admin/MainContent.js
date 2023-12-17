@@ -1,11 +1,56 @@
-import { useContext } from "react";
-import { UserContext } from "../../context/userContext";
 import Navbar from "./Navbar";
 import { ChartDashBoard } from "../dashboard/Chart";
+import axios from "axios";
+import { useContext, useEffect, useState } from 'react';
 
 function MainContent() {
-    const { userId } = useContext(UserContext);
-    console.log(userId);
+    const [month, setMonth] = useState('')
+    function valueGroup(data){
+        var values = []
+        let valeur = 0
+        for(const value in data){
+            valeur = valeur + parseInt(data[value])
+        }
+        console.log(valeur);
+        return valeur * 4000
+    }
+    const https = axios.create({
+        baseURL: "https://us-central1-boulou-functions-for-devs.cloudfunctions.net",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+      
+      const fetchDataMonth = async () => {
+        const response = await https.get('/boulou_get_deviceStatistics', {
+            params: {
+              developerId: "-Nlm4dylAEVqUP6jRrOF",
+              email: "ramamonjizafymanitra06@gmail.com",
+              deviceId: 'bf7f35cf2583be4b5ej9tt',
+              period_type: 'month',
+              period_value: 202312
+            },
+            headers: {
+              'Content-Type': 'application/json',
+            },
+          }).catch(e=>{
+            console.error(e)
+          });
+          return response.data.result
+          // Mettez à jour les états en fonction de la réponse
+        //   setIsSwitchOn(response.data.result.status.switch);
+        //   setIntensity(response.data.result.status.actual_current);
+        //   setCurrent(response.data.result.status.actual_voltage);
+        //   setPower(response.data.result.status.actual_power);
+      };
+      useEffect(()=>{
+        const fetch = async()=>{
+            const datas = await fetchDataMonth()
+            setMonth(datas)
+        }
+        fetch()
+          
+      })
     return (<>
         <div className="d-flex flex-column">
             {/* Main Content */}
@@ -58,7 +103,7 @@ function MainContent() {
                                                 Consommation mensuel
                                             </div>
                                             <div className="h5 mb-0 font-weight-bold text-gray-800">
-                                                $215,000
+                                                {valueGroup(month)} Ar
                                             </div>
                                         </div>
                                         <div className="col-auto">
